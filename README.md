@@ -1,4 +1,4 @@
-# draft-team
+# draft-project
 
 ## Project setup
 ```
