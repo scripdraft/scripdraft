@@ -12,6 +12,17 @@ const messages = {
     technologies: "Technologies",
     contribute: "Contribute",
     github: "GitHub",
+    draft: "Draft",
+    draftText: "Click commit to save a snapshot of the current text. Then you can use the back and forward buttons to browse among these commits. You may also use the keyboard shortcut Ctrl+P to commit.",
+    back: "Back",
+    commit: "Commit",
+    forward: "Forward",
+    reset: "Reset to last commit",
+    clear: "Clear All",
+    about: "About this widget",
+    aboutText: "",
+
+
   },
   tr: {
     english: "İngilizce",
@@ -21,6 +32,16 @@ const messages = {
     technologies: "Teknolojiler",
     contribute: "Destek Ver",
     github: "GitHub",
+    draft: "Draft",
+    draftText: "İşle tuşuna tıklayarak veya Ctrl+P ile mevcut metni kaydedin. Geri veya İleri tuşlarıyla bir önceki kayıtlara ulaşabilirsiniz.",
+    back: "Geri",
+    commit: "İşle",
+    forward: "İleri",
+    reset: "Son işlemi resetle",
+    clear: "Hepsini Sil",
+    about: "Widget Hakkında",
+    aboutText: "",
+
 
   }
 };

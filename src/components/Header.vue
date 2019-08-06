@@ -1,5 +1,5 @@
 <template>
-    <div id="profile-header">
+    <div class="shadow" id="profile-header">
         <b-navbar toggleable="lg" type="dark" variant="primary" class="bg-primary">
             <b-navbar-brand href="#">{{ $t('draftProject') }}</b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -8,7 +8,7 @@
                     <b-nav-item href="#"><i class="fas fa-user-friends"></i> {{ $t('team') }}</b-nav-item>
                     <b-nav-item href="#"><i class="fas fa-atom"></i> {{ $t('technologies') }}</b-nav-item>
                     <b-nav-item href="#"><i class="fas fa-hand-holding-usd"></i> {{ $t('contribute') }}</b-nav-item>
-                    <b-nav-item href="#"><i class="fab fa-github"></i> {{ $t('github') }}</b-nav-item>
+                    <b-nav-item href="https://github.com/draftteam/draft" target="_blank"><i class="fab fa-github"></i> {{ $t('github') }}</b-nav-item>
                     <div>
                         <b-dropdown v-if="$i18n.locale=='en'" right slot="append" text="Language" variant="outline-secondary">
                             <b-dropdown-item @click='$i18n.locale="en"'><img src="../assets/us.svg" alt="US" width="20px"> {{ $t('english') }}</b-dropdown-item>
