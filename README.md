@@ -1,4 +1,4 @@
-# kaan-portfolio
+# draft-team
 
 ## Project setup
 ```
