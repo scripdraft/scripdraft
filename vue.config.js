@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: "/kaan-portfolio",
+    publicPath: "/draft-project",
 
     css: {
         modules: true,
