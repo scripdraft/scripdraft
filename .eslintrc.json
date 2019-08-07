@@ -5,9 +5,13 @@
     },
     "extends": [
         "plugin:vue/essential",
+        "plugin:vue/recommended"
     ],
     "rules": {
-        "indent": ["error", 4],
+        "indent": "off",
+        "vue/script-indent": ["error", 4, {
+            "baseIndent": 1
+          }]
     },
     "parserOptions": {
         "parser": "babel-eslint"

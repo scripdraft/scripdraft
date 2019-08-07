@@ -1,18 +1,28 @@
 <template>
-    <div id="workplace" class="col col-12 col-sm-8">
-        <h1 id="maintitle">{{ $t('draft') }}</h1>
+  <div
+    id="workplace"
+    class="col col-12 col-sm-8"
+  >
+    <h1 id="maintitle">
+      {{ $t('draft') }}
+    </h1>
 
-        <hr>
-        <div class="form-group blue-border-focus">
-            <label for="textarea1">{{ $t('draftText') }}</label>
-            <textarea autofocus class="form-control" id="textarea1" rows="7"></textarea>
-        </div>
-        <Buttons></Buttons>
+    <hr>
+    <div class="form-group blue-border-focus">
+      <label for="textarea1">{{ $t('draftText') }}</label>
+      <textarea
+        id="textarea1"
+        autofocus
+        class="form-control"
+        rows="7"
+      />
     </div>
+    <Buttons />
+  </div>
 </template>
 
 <script>
-import Buttons from "./Buttons";
+    import Buttons from "./Buttons";
     export default {
         components: {
             Buttons,

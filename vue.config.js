@@ -1,17 +1,17 @@
 module.exports = {
-  publicPath: '/kaan-portfolio',
+    publicPath: "/kaan-portfolio",
 
-  css: {
-    modules: true,
-    extract: false
-  },
+    css: {
+        modules: true,
+        extract: false
+    },
 
-  pluginOptions: {
-    i18n: {
-      locale: 'en',
-      fallbackLocale: 'tr',
-      localeDir: 'locales',
-      enableInSFC: true
+    pluginOptions: {
+        i18n: {
+            locale: "en",
+            fallbackLocale: "tr",
+            localeDir: "locales",
+            enableInSFC: true
+        }
     }
-  }
-}
+};
