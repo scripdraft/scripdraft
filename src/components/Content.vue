@@ -1,10 +1,10 @@
 <template>
-    <div class=container>
-        <div class="row">
-            <Workplace></Workplace>
-            <About></About>
-        </div>
+  <div class="container">
+    <div class="row">
+      <Workplace />
+      <About />
     </div>
+  </div>
 </template>
 
 <script>
