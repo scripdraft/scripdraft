@@ -1,7 +1,7 @@
 <template>
   <div
     id="workplace"
-    class="col col-12 col-sm-8"
+    class="col col-12 col-sm-4"
   >
     <h1 id="maintitle">
       {{ $t('draft') }}
