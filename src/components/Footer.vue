@@ -1,7 +1,10 @@
 <template>
   <div class="footer-wrap">
     <footer class="container">
-      <hr>© 2019 Copyright - DraftTeam
+      <hr>© 2019 Copyright - <a
+        href="https://github.com/draftteam"
+        target="_blank"
+      >DraftTeam</a>
     </footer>
   </div>
 </template>
