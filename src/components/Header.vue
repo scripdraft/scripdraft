@@ -9,7 +9,9 @@
       variant="primary"
       class="bg-primary"
     >
-      <b-navbar-brand href="#">
+      <b-navbar-brand
+        href="http://scripdraft.com"
+      >
         {{ $t('draftProject') }}
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" />
