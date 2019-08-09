@@ -98,6 +98,7 @@
                 this.allCommits.unshift(this.myForwards[0]);
                 this.currentCommit = this.allCommits[0];
                 this.myForwards.shift();
+                this.$refs.myTextArea.focus();
             },
             resetLastCommit() {
                 this.currentCommit = this.allCommits[0];
