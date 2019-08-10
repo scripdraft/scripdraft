@@ -77,7 +77,8 @@
             return {
                 currentCommit: {text: "", timestamp: ""},
                 allCommits: [],
-                myForwards: []
+                myForwards: [],
+                dates: [],
             };
         },
         computed: { 
@@ -101,11 +102,18 @@
             }
         },
         methods: {
-            addCommit() { //done i think wowowow
-                var commitTime = new Date().getTime().toString();
-                this.currentCommit.timestamp = commitTime;
-                var commitCopy = Object.assign({}, this.currentCommit);
-                this.allCommits.unshift(commitCopy);
+            addCommit() {
+                this.allCommits.unshift(this.currentCommit);
+                var currentdate = new Date(); 
+                var datetime =currentdate.getDate() + "/"
+                    + (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() + " @ "  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+                this.dates.unshift(datetime);
+                this.$emit("customevent");  //When I call addCommit, I think I need to send an emit? And listen it from Content.vue?
+                /* console.log(this.dates); */  //Date check - Ignore it
                 this.$refs.myTextArea.focus();
             },
             clearAll() { //done
@@ -124,6 +132,7 @@
                 this.allCommits.unshift(this.myForwards[0]);
                 this.currentCommit = this.allCommits[0];
                 this.myForwards.shift();
+                this.$refs.myTextArea.focus();
             },
             resetLastCommit() {
                 this.currentCommit = this.allCommits[0];

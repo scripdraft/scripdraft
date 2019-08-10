@@ -43,14 +43,14 @@
               text="Language"
               variant="outline-secondary"
             >
-              <b-dropdown-item @click="$i18n.locale=&quot;en&quot;">
+              <b-dropdown-item @click="$i18n.locale='en'">
                 <img
                   src="../assets/us.svg"
                   alt="US"
                   width="20px"
                 > {{ $t('english') }}
               </b-dropdown-item>
-              <b-dropdown-item @click="$i18n.locale=&quot;tr&quot;">
+              <b-dropdown-item @click="$i18n.locale='tr'">
                 <img
                   src="../assets/tr.svg"
                   alt="TR"
@@ -65,14 +65,14 @@
               text="Dil"
               variant="outline-secondary"
             >
-              <b-dropdown-item @click="$i18n.locale=&quot;en&quot;">
+              <b-dropdown-item @click="$i18n.locale='en'">
                 <img
                   src="../assets/us.svg"
                   alt="US"
                   width="20px"
                 > {{ $t('english') }}
               </b-dropdown-item>
-              <b-dropdown-item @click="$i18n.locale=&quot;tr&quot;">
+              <b-dropdown-item @click="$i18n.locale='tr'">
                 <img
                   src="../assets/tr.svg"
                   alt="TR"
