@@ -6,12 +6,15 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "start": "cross-env NODE_ENV=production node app.js",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.27",
     "core-js": "^2.6.5",
+    "cross-env": "^5.2.0",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "vue": "^2.6.10",
     "vue-i18n": "^8.12.0"
