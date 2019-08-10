@@ -1,4 +1,4 @@
-# draft-project
+# scrip-draft
 
 ## Project setup
 ```
