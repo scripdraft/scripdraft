@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: "/scrip-draft",
+    publicPath: "/",
 
     css: {
         modules: true,
