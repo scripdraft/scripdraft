@@ -74,12 +74,23 @@
             return {
                 currentCommit: "",
                 allCommits: [],
-                myForwards: []
+                myForwards: [],
+                dates: [],
             };
         },
         methods: {
             addCommit() {
                 this.allCommits.unshift(this.currentCommit);
+                var currentdate = new Date(); 
+                var datetime =currentdate.getDate() + "/"
+                    + (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() + " @ "  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+                this.dates.unshift(datetime);
+                this.$emit("customevent");  //When I call addCommit, I think I need to send an emit? And listen it from Content.vue?
+                /* console.log(this.dates); */  //Date check - Ignore it
                 this.$refs.myTextArea.focus();
             },
             clearAll() {
