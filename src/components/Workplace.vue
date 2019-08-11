@@ -63,11 +63,28 @@
             {{ $t("clear") }}
           </b-button>
         </b-button-group>
-        currentCommit = {{ currentCommit }} <br>
-        allCommits = {{ allCommits }}<br>
-        myForwards = {{ myForwards }}
       </div>
     </div>
+    <hr>
+    currentCommit = {{ currentCommit.text }} <br>
+    <ul>
+      allCommits= <br>
+      <li
+        v-for="item in allCommits"
+        :key="item.id"
+      >
+        {{ item.text }}
+      </li>
+    </ul><br>
+    <ul>
+      myForwards= <br>
+      <li
+        v-for="item in myForwards"
+        :key="item.id"
+      >
+        {{ item.text }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -102,18 +119,11 @@
             }
         },
         methods: {
-            addCommit() {
-                this.allCommits.unshift(this.currentCommit);
-                var currentdate = new Date(); 
-                var datetime =currentdate.getDate() + "/"
-                    + (currentdate.getMonth()+1)  + "/" 
-                    + currentdate.getFullYear() + " @ "  
-                    + currentdate.getHours() + ":"  
-                    + currentdate.getMinutes() + ":" 
-                    + currentdate.getSeconds();
-                this.dates.unshift(datetime);
-                this.$emit("customevent");  //When I call addCommit, I think I need to send an emit? And listen it from Content.vue?
-                /* console.log(this.dates); */  //Date check - Ignore it
+            addCommit() { //done i think wowowow
+                let commitTime = new Date().getTime().toString();
+                this.currentCommit.timestamp = commitTime;
+                let commitCopy = Object.assign({}, this.currentCommit); //prevent real time commitCopy
+                this.allCommits.unshift(commitCopy);
                 this.$refs.myTextArea.focus();
             },
             clearAll() { //done
@@ -125,12 +135,12 @@
             backCommit() {
                 this.myForwards.unshift(this.allCommits[0]);
                 this.allCommits.shift();
-                this.currentCommit=this.allCommits[0];
+                this.currentCommit.text=this.allCommits[0].text;
                 this.$refs.myTextArea.focus();
             },
             forwardCommit() {
                 this.allCommits.unshift(this.myForwards[0]);
-                this.currentCommit = this.allCommits[0];
+                this.currentCommit.text = this.allCommits[0].text;
                 this.myForwards.shift();
                 this.$refs.myTextArea.focus();
             },
