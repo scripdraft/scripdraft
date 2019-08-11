@@ -4,7 +4,7 @@
       <hr>© 2019 Copyright - <a
         href="https://github.com/draftteam"
         target="_blank"
-      >DraftTeam</a>
+      >ScripDraft</a>
     </footer>
   </div>
 </template>
