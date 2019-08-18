@@ -13,7 +13,7 @@
       <textarea
         id="textarea1"
         ref="myTextArea"
-        v-model="currentCommit"
+        v-model="currentCommit.text"
         autofocus
         class="form-control"
         rows="7"
@@ -32,7 +32,7 @@
             {{ $t("back") }}
           </b-button>
           <b-button
-            :class="{disabled: currentCommit.length==0 || currentCommit== allCommits[0]}"
+            :class="{disabled: isCommitValid}"
             variant="success"
             @click="addCommit"
           >
@@ -72,38 +72,63 @@
     export default {
         data() {
             return {
-                currentCommit: "",
+                currentCommit: {text: "", timestamp: ""},
                 allCommits: [],
-                myForwards: []
+                myForwards: [],
+                dates: [],
             };
+        },
+        computed: { 
+            isCommitValid() {
+                if(this.currentCommit.text.length>0){
+                    if(this.allCommits.length>0){
+                        if(this.currentCommit.text==this.allCommits[0].text){
+                            return true;
+                        }
+                        else{
+                            return false;
+                        }
+                    }
+                    else{
+                        return false;
+                    }
+                }
+                else{
+                    return true;
+                }
+            }
         },
         methods: {
             addCommit() {
-                this.allCommits.unshift(this.currentCommit);
+                let commitTime = new Date().getTime().toString();
+                this.currentCommit.timestamp = commitTime;
+                let commitCopy = Object.assign({}, this.currentCommit);
+                this.allCommits.unshift(commitCopy);
                 this.$refs.myTextArea.focus();
             },
-            clearAll() {
+            clearAll() { //done
                 this.allCommits = [];
-                this.currentCommit = "";
+                this.currentCommit = {text: "", timestamp: ""};
                 this.myForwards = [];
                 this.$refs.myTextArea.focus();
             },
             backCommit() {
                 this.myForwards.unshift(this.allCommits[0]);
                 this.allCommits.shift();
-                this.currentCommit=this.allCommits[0];
+                this.currentCommit.text=this.allCommits[0].text;
                 this.$refs.myTextArea.focus();
             },
             forwardCommit() {
                 this.allCommits.unshift(this.myForwards[0]);
-                this.currentCommit = this.allCommits[0];
+                this.currentCommit.text = this.allCommits[0].text;
                 this.myForwards.shift();
+                this.$refs.myTextArea.focus();
             },
             resetLastCommit() {
                 this.currentCommit = this.allCommits[0];
                 this.$refs.myTextArea.focus();
-            }
-        }
+            }        
+        },
     };
 </script>
 
