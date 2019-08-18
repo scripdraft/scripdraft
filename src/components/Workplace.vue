@@ -80,6 +80,14 @@
         },
         computed: { 
             commitCheck() {
+                // to do:
+                // Kaan : please rewrite this.  It's a little confusing because 
+                // of all the separate if/then blocks.  Combine them.  Also, for a computed value, give it
+                // a name that explains what it is.  In this case you are checking 
+                // something like "commit now invalid".  I think we should flip
+                // the logic so that this function checks whether commiting now IS
+                // valid.  Then later update the template so the button is disabled 
+                // when this value is false.  Then name the computed value "isCommitValid".
                 if(this.currentCommit.text.length>0){
                     if(this.allCommits.length>0){
                         if(this.currentCommit.text==this.allCommits[0].text){
