@@ -2,9 +2,9 @@
   <div class="footer-wrap">
     <footer class="container">
       <hr>© 2019 Copyright - <a
-        href="https://github.com/draftteam"
+        href="https://github.com/scripdraft"
         target="_blank"
-      >DraftTeam</a>
+      >ScripDraft</a>
     </footer>
   </div>
 </template>
