@@ -2,7 +2,7 @@
 
 This document will contain guidelines for contributing to the project, applicable to everyone, including project owners and team members.
 
-## Poject Board
+## Project Board
 
 We organize our project using a Trello board at https://trello.com/b/0qRYFokv/scripdraft.  Anyone can view it, but only team members can edit it.
 
