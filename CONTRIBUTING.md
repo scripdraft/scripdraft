@@ -1,8 +1,6 @@
 # Contributing to ScripDraft 
 
-## Overview
-
-This document will contains guidelines all of us use for contributing to the project, including project owners and team members.
+This document will contain guidelines for contributing to the project, applicable to everyone, including project owners and team members.
 
 ## Poject Board
 
@@ -10,23 +8,32 @@ We organize our project using a Trello board at https://trello.com/b/0qRYFokv/sc
 
 ## Getting Involved
 
-If you want to get in on this project, we could certainly use some backend talent. Contact Adam Cross for more info on that.  (@adamfgcross on Twitter, Xerocross on GitHub.)
-
-
-## Guidelines for Team Members
-
-When adding a new feature, you should create a new Git branch _from master_.  Give the branch a meaningful name describing what the changes are, like "update-text-in-header" or something like that.
-
-There is a stage branch.  You may directly merge your changes into the stage branch.  Any changes you make to the stage branch will build automatically.  (Give it a few minutes.)  Then you can view the changes in a live environment at http://stage.scripdraft.com.  
-
-When you are satisfied with your changes, create a PR to merge your branch into master, and raise it to the attention of the project owners, either Adam (Xerocross) or Kaan (kgokdemir).
-
-The PR may not be accepted, but this creates a way for us to discuss the changes in an organied way, and it allows for back-and-forth discussion.  
+If you want to become a member of our team, we could certainly use some backend talent.  We could also use some QA talent.  Contact Adam Cross for more info on that.  Adam is ScripDraft lead.  (@adamfgcross on Twitter, Xerocross on GitHub.)  FrontEnd devs are also welcome to contact us.  Kaan (kgokdemir) is the frontend lead, so if you want to contribute to the frontend you should contact him.
 
 ## Guidelines for Potential New Contributors
 
-Sorry.  I haven't really figured out how to do this yet.  We welcome others to get involved, so if you want to get involved, please just contact Adam Cross and we will figure it out.
+Sorry.  I haven't really figured out how to do this yet.  See above "Getting Involved" section.
+
+## Guidelines for Team Members
+
+Each code change should have an associated task-card on the Trello board.  When you begin work on the new feature, if there is not a card for it already on Trello, then please create a new card with an appropriate name, something like "Add Contributing File"
+
+The name should describe the changes, and all changes should be related to just one general theme.  It should not be a collection of unrelated changes.
+
+When you start working on a new Trello board item, please move the card for it into the "in development" bucket.
+
+On your local computer, always make sure your copy of the master branch is current.  You can use `git pull` to do that.  Before starting code changes, checkout the master branch and then create a new branch with a name the same as the Trello card name, but in kebab-case, like "add-contributing-file".
+
+Make your changes only in your new branch.  You may push the new branch to remote at any time.  Do not merge the branch directly into master.  And never make any changes directly to master, even if you have write privileges.
+
+There is a stage branch.  Stage is for previewing and testing your code in a live environment, but it is not the "production" environment.  You may directly merge your new branch into the stage branch.  Any changes you make to the stage branch will build automatically.  (Give it a few minutes.)  Then you can view the changes in a live environment at http://stage.scripdraft.com.
+
+When you are satisfied with your changes, create a PR to merge your branch into master.  The PR should have the same name as the name of the Trello board card, like "Add Contributing File".  Raise the PR to the attention of the project owners, Adam (Xerocross) and Kaan (kgokdemir).
+
+When you have raised the PR, please move the Tello card item to the "In Review" list.
+
+From here, project owners will review the PR.
 
 ## Project Owners
 
-Currently the project owners are Adam (Xerocross) and Kaan (kgokdemir).
+The project owners are Adam (Xerocross) and Kaan (kgokdemir).
