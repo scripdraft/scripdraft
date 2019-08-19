@@ -9,26 +9,38 @@
       variant="primary"
       class="bg-primary"
     >
-      <b-navbar-brand
-        href="http://scripdraft.com"
+      <router-link
+        
+        to="/"
+        tag="b-navbar-brand"
+        active-class="brand"
       >
         {{ $t('draftProject') }}
-      </b-navbar-brand>
+      </router-link>
       <b-navbar-toggle target="nav-collapse" />
       <b-collapse
         id="nav-collapse"
         is-nav
       >
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#">
+          <router-link
+            to="/team"
+            tag="b-nav-item"
+          >
             <i class="fas fa-user-friends" /> {{ $t('team') }}
-          </b-nav-item>
-          <b-nav-item href="#">
-            <i class="fas fa-atom" /> {{ $t('technologies') }}
-          </b-nav-item>
-          <b-nav-item href="#">
-            <i class="fas fa-hand-holding-usd" /> {{ $t('contribute') }}
-          </b-nav-item>
+          </router-link>
+          <router-link
+            to="/technologies"
+            tag="b-nav-item"
+          >
+            <i class="fas fa-user-friends" /> {{ $t('technologies') }}
+          </router-link>
+          <router-link
+            to="/contribute"
+            tag="b-nav-item"
+          >
+            <i class="fas fa-user-friends" /> {{ $t('contribute') }}
+          </router-link>
           <b-nav-item
             href="https://github.com/draftteam/draft"
             target="_blank"
@@ -100,5 +112,11 @@
 
 
 <style scoped>
+
+.brand{
+  cursor: pointer;
+  font-size: 22px;
+  padding-bottom: 0px;
+}
 
 </style>
