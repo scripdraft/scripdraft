@@ -36,4 +36,4 @@ From here, project owners will review the PR.
 
 ## Project Owners
 
-The project owners are Adam (Xerocross) and Kaan (kgokdemir).
+The project owners are Adam [(@xerocross)](https://www.github.com/xerocross) and Kaan [(@kgokdemir)](https://github.com/kgokdemir).
