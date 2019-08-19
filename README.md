@@ -1,5 +1,9 @@
 # scrip-draft
 
+## For Contribute
+
+Please check [CONTRIBUTE.md](https://github.com/scripdraft/scripdraft/blob/master/CONTRIBUTING.md) 
+
 ## Project setup
 ```
 npm install
