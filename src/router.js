@@ -16,8 +16,7 @@ export default new Router({
     {
       path: "/team",
       name: "team",
-      component: () =>
-        import("./views/Team.vue")
+      component: () => import("./views/Team.vue")
     },
     {
       path: "/technologies",
@@ -28,6 +27,11 @@ export default new Router({
       path: "/contribute",
       name: "contribute",
       component: () => import("./views/Contribute.vue")
+    },
+    {
+        path: "*",
+        name: "404",
+        component: () => import("./views/404.vue")
     },
   ]
 });

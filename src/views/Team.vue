@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is Contribiton file
+    This is Team file
   </div>
 </template>
 
