@@ -29,6 +29,21 @@ export default new Router({
       component: () => import("./views/Contribute.vue")
     },
     {
+      path: "/signup",
+      name: "signup",
+      component: () => import("./views/Signup.vue")
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("./views/Login.vue")
+    },
+    {
+      path: "/forget",
+      name: "forget",
+      component: () => import("./views/ForgotPassword.vue")
+    },
+    {
         path: "*",
         name: "404",
         component: () => import("./views/404.vue")
