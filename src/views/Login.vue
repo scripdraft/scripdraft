@@ -5,10 +5,10 @@
         <div class="col-sm-4 offset-sm-4">
           <form>
             <h1 class="text-center page-title">
-              {{ $t('login') }}
+              {{ $t('login.login') }}
             </h1>
             <div class="form-group">
-              <label>{{ $t('username') }}</label>
+              <label>{{ $t('login.username') }}</label>
               <input
                 v-model="userLogin.id"
                 type="text"
@@ -17,7 +17,7 @@
             </div>
             <div class="form-group">
               <div>
-                <label>{{ $t('password') }}</label>
+                <label>{{ $t('login.password') }}</label>
               </div>
               <input
                 v-model="userLogin.password"
@@ -29,17 +29,29 @@
               <input
                 type="submit"
                 class="login-btn"
-                :value=" $t('submit') "
+                :value=" $t('login.submit') "
               >
+            </div>
+            
+            {{ $t('login.or') }}
+
+            <div
+              class="form-group google-btn"
+            >
+              <img
+                src="https://image.flaticon.com/icons/svg/281/281764.svg"
+                alt="Search"
+                class="replaced-svg"
+              >{{ $t('login.google') }}
             </div>
             <div class="form-group form-footer">
               <p>
-                {{ $t('dontHaveAccount') }}
+                {{ $t('login.dontHaveAccount') }}
                 <router-link
                   to="/signup"
                   tag="a"
                 >
-                  {{ $t('createAccount') }}
+                  {{ $t('login.createAccount') }}
                 </router-link>
               </p>
               <p>
@@ -47,7 +59,7 @@
                   to="/forget"
                   tag="a"
                 >
-                  {{ $t('forgotPassword') }}
+                  {{ $t('login.forgotPassword') }}
                 </router-link>
               </p>
             </div>
@@ -137,6 +149,31 @@ select:focus {
   background-color: var(--primary-color);
   border: none;
   border-radius: 3px;
+  transition: 0.5s;
+}
+.google-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  color: #fff;
+  background-color:rgb(252, 150, 150);
+  border: none;
+  border-radius: 3px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.google-btn:hover{
+    background-color: rgb(255, 189, 189);
+}
+
+
+.replaced-svg {
+    display: inline-block;
+    border-radius: 1px;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
 }
 
 .login-btn:hover {
