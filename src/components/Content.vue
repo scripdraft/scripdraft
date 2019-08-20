@@ -18,10 +18,6 @@
     }
 </script>
 
-<style scoped>
-
-.container{
-    background-color:rgba(182, 183, 185, 0.068);
-}
+<style>
 
 </style>
