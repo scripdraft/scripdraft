@@ -1,4 +1,10 @@
-# scrip-draft
+# ScripDraft
+
+ScripDraft is a simple test editor with a robust undo/redo system based on Git, but simpler.
+
+
+# Vue-Cli Boilerplate
+
 
 ## For Contribute
 
