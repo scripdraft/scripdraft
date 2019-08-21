@@ -33,9 +33,17 @@ const messages = {
       or: "or",
     },
     signup: {
+      warning: {
+        fullname: "Your fullname should be at least 3 characters."
+      },
       signup: "Sign Up",
-      firstname: "First Name",
-      lastname: "Last Name",
+      fullname: "Your Full Name",
+      username: "Choose an Username",
+      email: "Enter your e-mail",
+      iveRead: "I have read and agree to the ",
+      privacyPolicy: "Privacy Policy",
+      passwordFirst: "Choose a password",
+      passwordSecond: "Retype your password",
     }
   },
   tr: {
@@ -72,7 +80,7 @@ const messages = {
 
 const i18n = new VueI18n({
   locale: "en", // set locale
-  fallbackLocale: "tr", // set fallback locale
+  fallbackLocale: "en", // set fallback locale
   messages // set locale messages
 });
 

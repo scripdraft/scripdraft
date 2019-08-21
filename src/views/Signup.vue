@@ -4,27 +4,115 @@
       <h1>{{ $t('signup.signup') }}</h1>
       <hr>
       <div class="row">
-        <div class="col-sm-12 col col-lg-6 offset-lg-3 ">
+        <div class="col col-10 col col-lg-6 offset-lg-3 ">
           <form>
             <div class="form-group">
               <input
-                :placeholder="$t('signup.fullName')"
+                v-model="newUser.fullname"
+                :placeholder="$t('signup.fullname')"
+                type="text"
+                class="signup-from-input"
+              > 
+            </div>
+          </form>
+        </div>
+        <div class="col-1">
+          <i class="fas fa-times-circle" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-12 col col-lg-6 offset-lg-3 ">
+          <form>
+            <div class="form-group">
+              <input
+                v-model="newUser.username"
+                :placeholder="$t('signup.username')"
                 type="text"
                 class="signup-from-input"
               >
             </div>
           </form>
         </div>
-        <div class="col-sm-12 col col-lg-6 offset-lg-3 ">
+      </div>
+      <div class="row">
+        <div class="col col-sm-12 col col-lg-6 offset-lg-3 ">
           <form>
             <div class="form-group">
               <input
-                :placeholder="$t('signup.lastname')"
-                type="text"
+                v-model="newUser.email"
+                :placeholder="$t('signup.email')"
+                type="email"
                 class="signup-from-input"
               >
             </div>
           </form>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col col-sm-12 col col-lg-6 offset-lg-3 ">
+          <form>
+            <div class="form-group">
+              <input
+                v-model="newUser.passwordFirst"
+                :placeholder="$t('signup.passwordFirst')"
+                type="password"
+                class="signup-from-input"
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-sm-12 col col-lg-6 offset-lg-3 ">
+          <form>
+            <div class="form-group">
+              <input
+                v-model="newUser.passwordSecond"
+                :placeholder="$t('signup.passwordSecond')"
+                type="password"
+                class="signup-from-input"
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        <div class="col">
+          <div class="custom-control custom-checkbox">
+            <input
+              id="defaultUnchecked"
+              type="checkbox"
+              class="custom-control-input"
+              @click="termChange"
+            >
+            <label
+              id="privace"
+              
+              class="custom-control-label"
+              for="defaultUnchecked"
+            >{{ $t('signup.iveRead') }} <a href="#">{{ $t('signup.privacyPolicy') }}</a> </label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <button
+            v-if="submitAvailable"
+            class="btn btn-primary"
+          >
+            {{ $t('signup.signup') }}
+          </button>
+          <button
+            v-else
+            class="btn btn-primary disabled"
+          >
+            {{ $t('signup.signup') }}
+          </button>
         </div>
       </div>
     </div>
@@ -33,6 +121,57 @@
 
 <script>
     export default {
+        data() {
+            return {
+                newUser: {
+                    fullname:"",
+                    username: "",
+                    passwordFirst: "",
+                    passwordSecond: "",
+                    email: "",
+                    acceptTerms: false,
+                },
+                warning: {
+                    fullname:"",
+                    username: "",
+                    password: "",
+                    email: "",
+                },
+            }
+        },
+        computed: {
+            passwordCheck(){ //Both password match or not
+                if(this.newUser.passwordFirst==this.newUser.passwordSecond){return true;}
+                return false;
+            },
+            submitAvailable() { //if 1-2-3-4 true
+                if(this.fullnameAvailable && this.passwordAvailable && this.usernameAvailable && this.emailAvailable){
+                    return true;
+                } return false;
+            },
+            fullnameAvailable(){ //1
+                if (this.newUser.fullname.length>2){
+                    return true;
+                } 
+                return false;
+            },
+            passwordAvailable(){ //2
+                if (this.newUser.passwordFirst.length>7 && this.passwordCheck){
+                    return true;
+                } return false;
+            },
+            usernameAvailable(){ //3
+                return true;
+            },
+            emailAvailable(){ //4
+                return true;
+            },
+        },
+        methods: {
+            termChange() {
+                this.newUser.acceptTerms = !this.newUser.acceptTerms;
+            }
+        },
         
     }
 </script>
@@ -132,5 +271,15 @@ select:focus {
 
 .signup-btn:hover {
   background-color: var(--secondary-color);
+}
+.disabled {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  background-color: lightgrey;
+  border: lightgray solid 1px;
+}
+.fa-times-circle{
+  color: rgb(184, 49, 49);
+  margin-top: 12px;
 }
 </style>
