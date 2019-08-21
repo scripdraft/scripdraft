@@ -32,6 +32,11 @@ const messages = {
       google: "Login with Google",
       or: "or",
     },
+    signup: {
+      signup: "Sign Up",
+      firstname: "First Name",
+      lastname: "Last Name",
+    }
   },
   tr: {
     english: "İngilizce",
@@ -60,7 +65,8 @@ const messages = {
       submit: "Gönder",
       google: "Google ile giriş yap",
       or: "veya"
-    }
+    },
+    
   }
 };
 
