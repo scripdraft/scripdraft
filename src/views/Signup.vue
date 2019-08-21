@@ -17,11 +17,19 @@
           </form>
         </div>
         <div class="col-1">
-          <i class="fas fa-times-circle" />
+          <i
+            v-if="fullnameAvailable"
+            class="fas fa-check-circle"
+          />
+          <i
+           
+            v-else-if="newUser.fullname.length>0"
+            class="fas fa-times-circle"
+          />
         </div>
       </div>
       <div class="row">
-        <div class="col col-sm-12 col col-lg-6 offset-lg-3 ">
+        <div class="col col-sm-10 col col-lg-6 offset-lg-3 ">
           <form>
             <div class="form-group">
               <input
@@ -29,13 +37,25 @@
                 :placeholder="$t('signup.username')"
                 type="text"
                 class="signup-from-input"
+                @keydown.space.prevent
               >
             </div>
           </form>
         </div>
+        <div class="col-1">
+          <i
+            v-if="usernameAvailable"
+            class="fas fa-check-circle"
+          />
+          <i
+           
+            v-else-if="newUser.username.length>0"
+            class="fas fa-times-circle"
+          />
+        </div>
       </div>
       <div class="row">
-        <div class="col col-sm-12 col col-lg-6 offset-lg-3 ">
+        <div class="col col-sm-10 col col-lg-6 offset-lg-3 ">
           <form>
             <div class="form-group">
               <input
@@ -47,10 +67,21 @@
             </div>
           </form>
         </div>
+        <div class="col-1">
+          <i
+            v-if="emailAvailable"
+            class="fas fa-check-circle"
+          />
+          <i
+           
+            v-else-if="newUser.email.length>0"
+            class="fas fa-times-circle"
+          />
+        </div>
       </div>
       <br>
       <div class="row">
-        <div class="col col-sm-12 col col-lg-6 offset-lg-3 ">
+        <div class="col col-sm-10 col col-lg-6 offset-lg-3 ">
           <form>
             <div class="form-group">
               <input
@@ -58,14 +89,26 @@
                 :placeholder="$t('signup.passwordFirst')"
                 type="password"
                 class="signup-from-input"
+                @keydown.space.prevent
               >
             </div>
           </form>
         </div>
+        <div class="col-1">
+          <i
+            v-if="passwordAvailable"
+            class="fas fa-check-circle"
+          />
+          <i
+           
+            v-else-if="newUser.passwordFirst.length>0"
+            class="fas fa-times-circle"
+          />
+        </div>
       </div>
 
       <div class="row">
-        <div class="col col-sm-12 col col-lg-6 offset-lg-3 ">
+        <div class="col col-sm-10 col col-lg-6 offset-lg-3 ">
           <form>
             <div class="form-group">
               <input
@@ -76,6 +119,17 @@
               >
             </div>
           </form>
+        </div>
+        <div class="col-1">
+          <i
+            v-if="passwordCheck && newUser.passwordFirst.length>7"
+            class="fas fa-check-circle"
+          />
+          <i
+           
+            v-else-if="newUser.passwordSecond.length>0"
+            class="fas fa-times-circle"
+          />
         </div>
       </div>
       
@@ -129,7 +183,7 @@
                     passwordFirst: "",
                     passwordSecond: "",
                     email: "",
-                    acceptTerms: false,
+                    acceptTerms: false, //a.t.
                 },
                 warning: {
                     fullname:"",
@@ -144,8 +198,8 @@
                 if(this.newUser.passwordFirst==this.newUser.passwordSecond){return true;}
                 return false;
             },
-            submitAvailable() { //if 1-2-3-4 true
-                if(this.fullnameAvailable && this.passwordAvailable && this.usernameAvailable && this.emailAvailable){
+            submitAvailable() { //if 1-2-3-4-at-pwc true
+                if(this.fullnameAvailable && this.passwordAvailable && this.usernameAvailable && this.emailAvailable &&this.passwordCheck && this.newUser.acceptTerms){
                     return true;
                 } return false;
             },
@@ -156,15 +210,19 @@
                 return false;
             },
             passwordAvailable(){ //2
-                if (this.newUser.passwordFirst.length>7 && this.passwordCheck){
+                if (this.newUser.passwordFirst.length>7 && !this.newUser.passwordFirst.includes(" ")){
                     return true;
                 } return false;
             },
-            usernameAvailable(){ //3
-                return true;
+            usernameAvailable(){ // 3
+                if(this.newUser.username.length>2 && ! this.newUser.username.includes(" ")){
+                    return true
+                }
+                return false;
             },
             emailAvailable(){ //4
-                return true;
+                if(this.newUser.email.length>3 && !this.newUser.email.includes(" ") && this.newUser.email.includes("@") && this.newUser.email.includes(".")) {return true}
+                return false;
             },
         },
         methods: {
@@ -280,6 +338,10 @@ select:focus {
 }
 .fa-times-circle{
   color: rgb(184, 49, 49);
+  margin-top: 12px;
+}
+.fa-check-circle{
+  color: rgb(49, 184, 67);
   margin-top: 12px;
 }
 </style>
