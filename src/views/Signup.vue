@@ -4,7 +4,7 @@
       <h1>{{ $t('signup.signup') }}</h1>
       <hr>
       <div class="row">
-        <div class="col col-10 col col-lg-6 offset-lg-3 ">
+        <div class="col col-sm-10 col col-lg-6 offset-lg-3 ">
           <form>
             <div class="form-group">
               <input
@@ -63,6 +63,7 @@
                 :placeholder="$t('signup.email')"
                 type="email"
                 class="signup-from-input"
+                @keydown.space.prevent
               >
             </div>
           </form>
@@ -116,6 +117,7 @@
                 :placeholder="$t('signup.passwordSecond')"
                 type="password"
                 class="signup-from-input"
+                @keydown.space.prevent
               >
             </div>
           </form>
@@ -339,9 +341,11 @@ select:focus {
 .fa-times-circle{
   color: rgb(184, 49, 49);
   margin-top: 12px;
+  margin-right: 12px;
 }
 .fa-check-circle{
   color: rgb(49, 184, 67);
   margin-top: 12px;
+  margin-right: 12px;
 }
 </style>

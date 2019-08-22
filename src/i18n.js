@@ -74,6 +74,19 @@ const messages = {
       google: "Google ile giriş yap",
       or: "veya"
     },
+    signup: {
+      warning: {
+        fullname: "Tam adınız en az 3 karakter olmalıdır."
+      },
+      signup: "Kayıt ol",
+      fullname: "Tam adınız",
+      username: "Kullanıcı adı seçiniz",
+      email: "E-mail adresinizi giriniz",
+      iveRead: "Kullanıcı şartlarını okudum ve ",
+      privacyPolicy: "kabul ediyorum.",
+      passwordFirst: "Parolanızı seçiniz",
+      passwordSecond: "Parolanızı yeniden giriniz",
+    }
     
   }
 };
