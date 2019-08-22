@@ -2,7 +2,9 @@
   <div id="login">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 offset-sm-4">
+        <div
+          class="wrapper col-sm-4 offset-sm-4"
+        >
           <form>
             <h1 class="text-center page-title">
               {{ $t('login.login') }}
@@ -178,5 +180,9 @@ select:focus {
 
 .login-btn:hover {
   background-color: var(--secondary-color);
+}
+.wrapper{
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
 }
 </style>
