@@ -5,13 +5,19 @@ Vue.use(VueI18n);
 
 const messages = {
   en: {
-    english: "English",
-    turkish: "Turkish",
-    draftProject: "ScripDraft",
-    team: "Team",
-    technologies: "Technologies",
-    contribute: "Contribute",
-    github: "GitHub",
+    header:{
+      english: "English",
+      turkish: "Turkish",
+      draftProject: "ScripDraft",
+      team: "Team",
+      technologies: "Technologies",
+      contribute: "Contribute",
+      github: "GitHub",
+      signin: "Sign In",
+      menu: "Menu",
+      signup: "Sign Up",
+      login: "Login",
+    }, 
     draft: "ScripDraft",
     draftText: "Click commit to save a snapshot of the current text. Then you can use the back and forward buttons to browse among these commits. You may also use the keyboard shortcut Ctrl+Enter to commit.",
     back: "Back",
@@ -44,16 +50,27 @@ const messages = {
       privacyPolicy: "Privacy Policy",
       passwordFirst: "Choose a password",
       passwordSecond: "Retype your password",
+    },
+    forget: {
+      reset: "Reset your password",
+      placeholder: "Enter your e-mail",
+      button: "Send me new password",
     }
   },
   tr: {
-    english: "İngilizce",
-    turkish: "Türkçe",
-    draftProject: "ScripDraft",
-    team: "Ekip",
-    technologies: "Teknolojiler",
-    contribute: "Destek Ver",
-    github: "GitHub",
+    header:{
+      english: "İngilizce",
+      turkish: "Türkçe",
+      draftProject: "ScripDraft",
+      team: "Ekip",
+      technologies: "Teknolojiler",
+      contribute: "Destek Ver",
+      github: "GitHub",
+      signin: "Giriş Yap",
+      menu: "Menü",
+      signup: "Kayıt Ol",
+      login: "Giriş Yap",
+    },
     draft: "ScripDraft",
     draftText: "İşle tuşuna tıklayarak veya Ctrl+Enter ile mevcut metni kaydedin. Geri veya İleri tuşlarıyla bir önceki kayıtlara ulaşabilirsiniz.",
     back: "Geri",
@@ -86,6 +103,11 @@ const messages = {
       privacyPolicy: "kabul ediyorum.",
       passwordFirst: "Parolanızı seçiniz",
       passwordSecond: "Parolanızı yeniden giriniz",
+    },
+    forget: {
+      reset: "Parolanızı yenileyin",
+      placeholder: "E-mail adresinizi giriniz.",
+      button: "Yeni parolamı gönder.",
     }
     
   }
