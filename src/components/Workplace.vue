@@ -3,13 +3,15 @@
     class="workplace"
   >
     <h1 id="maintitle">
-      {{ $t('draft') }}
+      {{ $t('workplace.draft') }}
     </h1>
 
     <hr>
     <div class="form-group blue-border-focus">
-      <label class="instructions"
-for="textarea1">{{ $t('draftText') }}</label>
+      <label
+        class="instructions"
+        for="textarea1"
+      >{{ $t('workplace.context') }}</label>
       <textarea
         id="textarea1"
         ref="myTextArea"
@@ -29,21 +31,21 @@ for="textarea1">{{ $t('draftText') }}</label>
             :class="{disabled: allCommits.length<2}"
             @click="backCommit"
           >
-            {{ $t("back") }}
+            {{ $t("workplace.back") }}
           </b-button>
           <b-button
             :class="{disabled: isCommitValid}"
             variant="success"
             @click="addCommit"
           >
-            {{ $t("commit") }}
+            {{ $t("workplace.commit") }}
           </b-button>
           <b-button
             :class="{disabled: myForwards.length==0}"
             variant="info"
             @click="forwardCommit "
           >
-            {{ $t("forward") }}
+            {{ $t("workplace.forward") }}
           </b-button>
         </b-button-group>
       </div>
@@ -54,13 +56,13 @@ for="textarea1">{{ $t('draftText') }}</label>
             variant="warning"
             @click="resetLastCommit"
           >
-            {{ $t("reset") }}
+            {{ $t("workplace.reset") }}
           </b-button>
           <b-button
             variant="danger"
             @click="clearAll"
           >
-            {{ $t("clear") }}
+            {{ $t("workplace.clear") }}
           </b-button>
         </b-button-group>
       </div>
