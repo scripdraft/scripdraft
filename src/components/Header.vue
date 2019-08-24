@@ -15,7 +15,7 @@
         tag="b-navbar-brand"
         active-class="brand"
       >
-        {{ $t('draftProject') }}
+        {{ $t('header.draftProject') }}
       </router-link>
       <b-navbar-toggle target="nav-collapse" />
       <b-collapse
@@ -27,69 +27,63 @@
             to="/team"
             tag="b-nav-item"
           >
-            <i class="fas fa-user-friends" /> {{ $t('team') }}
+            <i class="fas fa-user-friends" /> {{ $t('header.team') }}
           </router-link>
           <router-link
             to="/technologies"
             tag="b-nav-item"
           >
-            <i class="fas fa-user-friends" /> {{ $t('technologies') }}
+            <i class="fas fa-user-friends" /> {{ $t('header.technologies') }}
           </router-link>
           <router-link
             to="/contribute"
             tag="b-nav-item"
           >
-            <i class="fas fa-user-friends" /> {{ $t('contribute') }}
+            <i class="fas fa-user-friends" /> {{ $t('header.contribute') }}
           </router-link>
           <b-nav-item
             href="https://github.com/draftteam/draft"
             target="_blank"
           >
-            <i class="fab fa-github" /> {{ $t('github') }}
+            <i class="fab fa-github" /> {{ $t('header.github') }}
           </b-nav-item>
           <div>
             <b-dropdown
-              v-if="$i18n.locale=='en'"
+              v-if="true"
               slot="append"
               right
-              text="Language"
+              :text="$t('header.menu')"
               variant="outline-secondary"
             >
+              <router-link
+                tag="b-dropdown-item"
+                to="/login"
+              >
+                <i class="fas fa-sign-in-alt" />
+                {{ $t('header.login') }}
+              </router-link>
+              <router-link
+                tag="b-dropdown-item"
+                to="/signup"
+              >
+                <i class="fas fa-user-plus" />
+                {{ $t('header.signup') }}
+              </router-link>
+           
+              <hr>
               <b-dropdown-item @click="$i18n.locale='en'">
                 <img
                   src="../assets/us.svg"
                   alt="US"
                   width="20px"
-                > {{ $t('english') }}
+                > {{ $t('header.english') }}
               </b-dropdown-item>
               <b-dropdown-item @click="$i18n.locale='tr'">
                 <img
                   src="../assets/tr.svg"
                   alt="TR"
                   width="20px"
-                > {{ $t('turkish') }}
-              </b-dropdown-item>
-            </b-dropdown>
-            <b-dropdown
-              v-else
-              slot="append"
-              right
-              text="Dil"
-              variant="outline-secondary"
-            >
-              <b-dropdown-item @click="$i18n.locale='en'">
-                <img
-                  src="../assets/us.svg"
-                  alt="US"
-                  width="20px"
-                > {{ $t('english') }}
-              </b-dropdown-item>
-              <b-dropdown-item @click="$i18n.locale='tr'">
-                <img
-                  src="../assets/tr.svg"
-                  alt="TR"
-                  width="20px"
-                > {{ $t('turkish') }}
+                > {{ $t('header.turkish') }}
               </b-dropdown-item>
             </b-dropdown>
           </div>

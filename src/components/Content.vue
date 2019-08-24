@@ -2,7 +2,6 @@
   <div class="container">
     <div class="row">
       <Workplace />
-      <About />
     </div>
   </div>
 </template>
@@ -12,8 +11,7 @@
     import About from "./About";
     export default {
         components: {
-            Workplace,
-            About,
+            Workplace
         }
     }
 </script>
