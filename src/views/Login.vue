@@ -5,9 +5,6 @@
         <div
           class=""
         >
-          <div style="text-align: center">
-            happy go
-          </div>
           <form>
             <h1 class="text-center page-title">
               {{ $t('login.login') }}

@@ -1,6 +1,6 @@
 <template>
   <div
-    id="workplace"
+    class="workplace"
   >
     <h1 id="maintitle">
       {{ $t('draft') }}
@@ -8,7 +8,8 @@
 
     <hr>
     <div class="form-group blue-border-focus">
-      <label for="textarea1">{{ $t('draftText') }}</label>
+      <label class="instructions"
+for="textarea1">{{ $t('draftText') }}</label>
       <textarea
         id="textarea1"
         ref="myTextArea"
@@ -135,8 +136,10 @@
 textarea {
   resize: none;
 }
-#workplace {
-  text-align: left;
+.workplace {
+  text-align: class;
+  margin-left:1em;
+  margin-right:1em;
 }
 #maintitle {
   margin-top: 20px;
@@ -155,5 +158,8 @@ textarea {
   pointer-events: none !important;
   background-color: lightgrey;
   border: lightgray solid 1px;
+}
+.instructions {
+  text-align: left;
 }
 </style>
