@@ -15,13 +15,12 @@
 
 <style scoped>
 .footer-wrap {
-  bottom: 0;
+  /* bottom: 0; */
   width: 100%;
-  height: 100px;
 }
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
   .footer-wrap {
-    position: absolute;
+    position: fixed;
   }
-}
+} */
 </style>
