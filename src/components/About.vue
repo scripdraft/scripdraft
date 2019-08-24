@@ -3,10 +3,10 @@
     id="about"
   >
     <h1 id="about-title">
-      {{ $t("about") }}
+      {{ $t("about.about") }}
     </h1>
     <hr>
-    {{ $t("aboutText") }}
+    {{ $t("about.context") }}
   </div>
 </template>
 
