@@ -1,7 +1,6 @@
 <template>
   <div
     id="about"
-    class="col col-12 col-sm-8"
   >
     <h1 id="about-title">
       {{ $t("about") }}

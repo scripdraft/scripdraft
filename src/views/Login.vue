@@ -1,10 +1,13 @@
 <template>
   <div id="login">
     <div class="container">
-      <div class="row">
+      <div class="">
         <div
-          class="wrapper col-sm-4 offset-sm-4"
+          class=""
         >
+          <div style="text-align: center">
+            happy go
+          </div>
           <form>
             <h1 class="text-center page-title">
               {{ $t('login.login') }}
