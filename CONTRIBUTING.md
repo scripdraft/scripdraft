@@ -8,7 +8,7 @@ We organize our project using a Trello board at https://trello.com/b/0qRYFokv/sc
 
 ## Getting Involved
 
-If you want to become a member of our team, we could certainly use some backend talent.  We could also use some QA talent.  Contact Adam Cross for more info on that.  Adam is ScripDraft lead.  (@adamfgcross on Twitter, Xerocross on GitHub.)  FrontEnd devs are also welcome to contact us.  Kaan (kgokdemir) is the frontend lead, so if you want to contribute to the frontend you should contact him.
+If you want to become a member of our team, we could certainly use some backend talent.  We could also use some QA talent.  Contact Adam Cross for more info on that.  Adam is ScripDraft lead.  ([(@adamfgcross)](https://twitter.com/adamfgcross) on Twitter, Xerocross on GitHub.)  FrontEnd devs are also welcome to contact us.  Kaan [(@kaangokdemir)](https://twitter/kaangokdemir) is the frontend lead, so if you want to contribute to the frontend you should contact him.
 
 ## Guidelines for Potential New Contributors
 
@@ -28,7 +28,7 @@ Make your changes only in your new branch.  You may push the new branch to remot
 
 There is a stage branch.  Stage is for previewing and testing your code in a live environment, but it is not the "production" environment.  You may directly merge your new branch into the stage branch.  Any changes you make to the stage branch will build automatically.  (Give it a few minutes.)  Then you can view the changes in a live environment at http://stage.scripdraft.com.
 
-When you are satisfied with your changes, create a PR to merge your branch into master.  The PR should have the same name as the name of the Trello board card, like "Add Contributing File".  Raise the PR to the attention of the project owners, Adam (Xerocross) and Kaan (kgokdemir).
+When you are satisfied with your changes, create a PR to merge your branch into master.  The PR should have the same name as the name of the Trello board card, like "Add Contributing File".  Raise the PR to the attention of the project owners, Adam (Xerocross) and Kaan (kaangokdemir).
 
 When you have raised the PR, please move the Tello card item to the "In Review" list.
 
@@ -36,6 +36,5 @@ From here, project owners will review the PR.
 
 ## Project Owners
 
-The project owners are Adam [(@xerocross)](https://www.github.com/xerocross) and Kaan [(@kgokdemir)](https://github.com/kgokdemir).
+The project owners are Adam [(@xerocross)](https://www.github.com/xerocross) and Kaan [(@kaangokdemir)](https://github.com/kaangokdemir).
 =======
-The project owners are Adam (Xerocross) and Kaan (kgokdemir).
