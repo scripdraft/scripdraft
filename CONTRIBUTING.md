@@ -8,7 +8,7 @@ We organize our project using a Trello board at https://trello.com/b/0qRYFokv/sc
 
 ## Getting Involved
 
-If you want to become a member of our team, we could certainly use some backend talent.  We could also use some QA talent.  Contact Adam Cross for more info on that.  Adam is ScripDraft lead.  ([@adamfgcross](https://twitter.com/adamfgcross) on Twitter, Xerocross on GitHub.)  FrontEnd devs are also welcome to contact us.  Kaan [(@kaangokdemir)](https://twitter/kaangokdemir) is the frontend lead, so if you want to contribute to the frontend you should contact him.
+If you want to become a member of our team, we could certainly use some backend talent.  We could also use some QA talent.  Contact Adam Cross for more info on that.  Adam is ScripDraft lead.  ([@adamfgcross](https://twitter.com/adamfgcross) on Twitter, Xerocross on GitHub.)  FrontEnd devs are also welcome to contact us.  Kaan [(@kaangokdemir)](https://twitter.com/kaangokdemir) is the frontend lead, so if you want to contribute to the frontend you should contact him.
 
 ## Guidelines for Potential New Contributors
 
