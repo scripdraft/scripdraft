@@ -42,7 +42,7 @@
             <i class="fas fa-user-friends" /> {{ $t('header.contribute') }}
           </router-link>
           <b-nav-item
-            href="https://github.com/draftteam/draft"
+            href="https://github.com/scripdraft/scripdraft"
             target="_blank"
           >
             <i class="fab fa-github" /> {{ $t('header.github') }}
