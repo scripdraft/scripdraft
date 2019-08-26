@@ -101,23 +101,17 @@
             };
         },
         computed: { 
-            isCommitValid() {
+            isCommitValid() { //26.08.19 -> Disallow return before else (no-else-return)
                 if(this.currentCommit.text.length>0){
                     if(this.allCommits.length>0){
                         if(this.currentCommit.text==this.allCommits[0].text){
                             return true;
                         }
-                        else{
-                            return false;
-                        }
-                    }
-                    else{
                         return false;
                     }
+                    return false;
                 }
-                else{
-                    return true;
-                }
+                return true;
             },
             reversedAllCommits(){
                 return this.allCommits.slice(1).reverse(); //slice "0" for vue/no-side-effects-in-computed-properties
@@ -161,7 +155,7 @@
                 this.$refs.myTextArea.focus();
             },
             resetLastCommit() {
-                this.currentCommit = this.allCommits[0];
+                this.currentCommit.text = this.allCommits[0].text;
                 this.$refs.myTextArea.focus();
             }        
         },
