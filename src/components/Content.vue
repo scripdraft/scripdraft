@@ -8,7 +8,6 @@
 
 <script>
     import Workplace from "./Workplace";
-    import About from "./About";
     export default {
         components: {
             Workplace
