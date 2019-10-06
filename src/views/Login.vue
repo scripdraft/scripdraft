@@ -1,9 +1,9 @@
 <template>
   <div id="login">
     <div class="container">
-      <div class="">
+      <div class="row">
         <div
-          class=""
+          class="wrapper col-sm-4 offset-sm-4"
         >
           <form>
             <h1 class="text-center page-title">
