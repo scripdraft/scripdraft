@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row offset-sm-2 col-sm-8">
+    <div class="offset-sm-2 col-sm-8">
       <div class="workplace">
         <h1 id="maintitle">
           {{ $t('workplace.draft') }}
@@ -71,26 +71,28 @@
         </div>
       </div>
     </div>
-    <div class="holder row offset-sm-2 col-sm-8">
-      <Shortcuts class="col-6" />
-      <div class="badges col-6">
-        <p>
-          <b>{{ $t("workplace.lastCommits") }}</b>
-        </p>
-        <span
-          v-for="commit in reversedAllCommits"
-          :key="commit.id"
-          class="badge badge-primary"
-        >{{ commit.text }}</span>
-        <span
-          v-if="isCurrentBadgeAvailable"
-          class="badge badge-success"
-        >{{ allCommits[0].text }}</span>
-        <span
-          v-for="commit in myForwards"
-          :key="commit.id"
-          class="badge badge-primary"
-        >{{ commit.text }}</span>
+    <div class="holder container offset-sm-2 col-sm-8">
+      <div class="row">
+        <Shortcuts class="col-6" />
+        <div class="badges col-6">
+          <p>
+            <b>{{ $t("workplace.lastCommits") }}</b>
+          </p>
+          <span
+            v-for="commit in reversedAllCommits"
+            :key="commit.id"
+            class="badge badge-primary"
+          >{{ commit.text }}</span>
+          <span
+            v-if="isCurrentBadgeAvailable"
+            class="badge badge-success"
+          >{{ allCommits[0].text }}</span>
+          <span
+            v-for="commit in myForwards"
+            :key="commit.id"
+            class="badge badge-primary"
+          >{{ commit.text }}</span>
+        </div>
       </div>
     </div>
   </div>
