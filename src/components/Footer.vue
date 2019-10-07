@@ -15,7 +15,7 @@
 
 <style scoped>
 .footer-wrap {
- position: fixed;
+ position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
