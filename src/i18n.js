@@ -27,6 +27,7 @@ const messages = {
       forward: "Forward",
       reset: "Reset to last commit",
       clear: "Clear All",
+      lastCommits: "Last Commits",
     },
     about: {
       about: "About this widget",
@@ -61,6 +62,13 @@ const messages = {
       reset: "Reset your password",
       placeholder: "Enter your e-mail",
       button: "Send me new password"
+    },
+    shortcuts: {
+      shortcuts: "Shortcuts",
+      save: "For save text screen: ",
+      previous: "Return to previous commit: ",
+      next: "Return to next commit: ",
+      clear: "Clear all: ",
     }
   },
   tr: {
@@ -86,6 +94,7 @@ const messages = {
       forward: "İleri",
       reset: "Son işlemi resetle",
       clear: "Hepsini Sil",
+      lastCommits: "Son Commitler",
     },
     about: {
       about: "Widget Hakkında",
@@ -120,6 +129,13 @@ const messages = {
       reset: "Parolanızı yenileyin",
       placeholder: "E-mail adresinizi giriniz.",
       button: "Yeni parolamı gönder."
+    },
+    shortcuts: {
+      shortcuts: "Kısayollar",
+      save: "Ekranı kaydet: ",
+      previous: "Bir önceki commit: ",
+      next: "Bir sonraki commit: ",
+      clear: "Hepsini temizle: ",
     }
   }
 };

@@ -15,12 +15,11 @@
 
 <style scoped>
 .footer-wrap {
-  /* bottom: 0; */
+ position: absolute;
+  bottom: 0;
   width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 100px;
+  line-height: 60px;
 }
-/* @media only screen and (min-width: 992px) {
-  .footer-wrap {
-    position: fixed;
-  }
-} */
 </style>

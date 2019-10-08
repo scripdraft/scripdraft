@@ -20,10 +20,12 @@
 
 <style>
 
-html,
-body {
-  height: 100%;
+html{
   position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 100px;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
