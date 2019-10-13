@@ -18,7 +18,7 @@
     };
 </script>
 
-<style>
+<style lang='scss'>
 
 html{
   position: relative;
@@ -36,4 +36,7 @@ body {
 
 }
 
+button.close{
+  color: red !important; 
+}
 </style>

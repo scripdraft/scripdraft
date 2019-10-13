@@ -28,6 +28,16 @@ const messages = {
       reset: "Reset to last commit",
       clear: "Clear All",
       lastCommits: "Last Commits",
+      alerts: {
+        success: {
+          title: "Commit saved",
+          body: "Your commit has been saved successfully...",
+        },
+        danger: {
+          title: "Commits cleared",
+          body: "All commits has been cleared successfully..."
+        }
+      }
     },
     about: {
       about: "About this widget",
@@ -95,6 +105,16 @@ const messages = {
       reset: "Son işlemi resetle",
       clear: "Hepsini Sil",
       lastCommits: "Son Commitler",
+      alerts: {
+        success: {
+          title: "İşlem başarılı",
+          body: "İşleminiz başarıyla kaydedildi...",
+        },
+        danger: {
+          title: "İşlemler silindi",
+          body: "Bütün işlemleriniz silindi ve sayfanız temizlendi..."
+        }
+      }
     },
     about: {
       about: "Widget Hakkında",
