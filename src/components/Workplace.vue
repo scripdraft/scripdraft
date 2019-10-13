@@ -147,12 +147,14 @@
                 let commitCopy = Object.assign({}, this.currentCommit);
                 this.allCommits.unshift(commitCopy);
                 this.$refs.myTextArea.focus();
+                this.toastSave()
             },
             clearAll() {
                 //done
                 this.allCommits = [];
                 this.currentCommit = { text: "", timestamp: "" };
                 this.myForwards = [];
+                this.toastClear();
                 this.$refs.myTextArea.focus();
             },
             backCommit() {
@@ -174,6 +176,26 @@
             resetLastCommit() {
                 this.currentCommit.text = this.allCommits[0].text;
                 this.$refs.myTextArea.focus();
+            },
+            toastSave() {
+                this.$bvToast.toast(this.$t('workplace.alerts.success.body'), {
+                    title: this.$t('workplace.alerts.success.title'),
+                    toaster: 'b-toaster-bottom-center',
+                    solid: true,
+                    appendToast: false,
+                    variant: 'success',
+                    autoHideDelay: 1000,
+                })
+            },
+            toastClear() {
+                this.$bvToast.toast(`All commits has been cleared`, {
+                    title: `Commits cleared`,
+                    toaster: 'b-toaster-bottom-center',
+                    solid: true,
+                    appendToast: false,
+                    variant: 'danger',
+                    autoHideDelay: 1000,
+                })
             }
         }
     };
