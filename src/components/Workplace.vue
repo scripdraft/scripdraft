@@ -14,6 +14,7 @@
           <textarea
             id="textarea1"
             ref="myTextArea"
+            data-testid="mainTextInput"
             v-model="currentCommit.text"
             autofocus
             class="form-control"
@@ -30,6 +31,7 @@
             <b-button-group>
               <b-button
                 variant="info"
+                data-testid="commitBack"
                 :class="{disabled: allCommits.length<2}"
                 @click="backCommit"
               >
@@ -37,6 +39,7 @@
               </b-button>
               <b-button
                 :class="{disabled: isCommitValid}"
+                data-testid="doCommit"
                 variant="success"
                 @click="addCommit"
               >
@@ -45,6 +48,7 @@
               <b-button
                 :class="{disabled: myForwards.length==0}"
                 variant="info"
+                data-testid="commitForward"
                 @click="forwardCommit "
               >
                 {{ $t("workplace.forward") }}
@@ -57,12 +61,14 @@
                 :class="{disabled: allCommits.length==0}"
                 variant="warning"
                 @click="resetLastCommit"
+                data-testid="resetToLastCommit"
               >
                 {{ $t("workplace.reset") }}
               </b-button>
               <b-button
                 variant="danger"
                 @click="clearAll"
+                data-testid="clearAllCommits"
               >
                 {{ $t("workplace.clear") }}
               </b-button>
@@ -100,6 +106,8 @@
 
 <script>
     import Shortcuts from "./Shortcuts";
+    import styles from  'bootstrap/dist/css/bootstrap.min.css'
+    import styles2 from 'bootstrap-vue/dist/bootstrap-vue.css'
     export default {
         components: {
             Shortcuts
@@ -201,7 +209,7 @@
     };
 </script>
 
-<style scoped>
+<style scoped >
 textarea {
   resize: none;
 }
