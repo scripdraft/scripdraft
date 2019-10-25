@@ -14,8 +14,8 @@
           <textarea
             id="textarea1"
             ref="myTextArea"
-            data-testid="mainTextInput"
             v-model="currentCommit.text"
+            data-testid="mainTextInput"
             autofocus
             class="form-control"
             rows="7"
@@ -60,15 +60,15 @@
               <b-button
                 :class="{disabled: allCommits.length==0}"
                 variant="warning"
-                @click="resetLastCommit"
                 data-testid="resetToLastCommit"
+                @click="resetLastCommit"
               >
                 {{ $t("workplace.reset") }}
               </b-button>
               <b-button
                 variant="danger"
-                @click="clearAll"
                 data-testid="clearAllCommits"
+                @click="clearAll"
               >
                 {{ $t("workplace.clear") }}
               </b-button>
